@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D121221032</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="title">Tabe kak</h1>
+        <button>klik</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+       
+        let originalContent = $('#title').text();
+        let originalButton = $('button').text();
+        let clickCount = 0;
+
+        $('button').click(function() {
+            if (clickCount == 0) {
+                $('#title').text('perkenalan teknik!');
+                $('button').text('lanjut');
+                clickCount++;
+            } else if (clickCount == 1) {
+                $('#title').text('perkenalkan nama asli saya VPN dan nama palsu saya andi muhammad farhan abdillah, mahasiswa teknik yang berkebetulan berkuliah di jurusan elektro departemen informatika fakultas teknik universitas hasanuddin angkatan 2022.');
+                $('button').text('ulang!');
+                clickCount++;
+            } else {
+                $('#title').text(originalContent);
+                $('button').text(originalButton);
+                clickCount = 0;
+            }
+        });
+    </script>
+
+</body>
+</html>
